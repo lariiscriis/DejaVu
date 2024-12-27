@@ -1,0 +1,1135 @@
+:root{
+    --amarelo: #FFC567;
+    --rosa: #FB7DA8;
+    --laranja: #FD5A46;
+    --roxo: #552CB7;
+    --verde: #00995E;
+    --azul: #058CD7;
+    --vermelho: #CD393F;
+}
+
+/* @font-face {
+   font-family: 'Gulfs Display';
+    src: url('assets\fonts\GulfsDisplay-Normal.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+} */
+
+@font-face {
+    font-family: 'Gulfs Display';
+    src: local('Gulfs Display Normal'), local('Gulfs-Display-Normal'),
+        url('GulfsDisplay-Normal.woff2') format('woff2'),
+        url('GulfsDisplay-Normal.woff') format('woff'),
+        url('GulfsDisplay-Normal.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
+@font-face {
+    font-family: "Saira Semi Condensed", sans-serif;
+    src: url('assets\fonts\Saira_Semi_Condensed\SairaSemiCondensed-Regular.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+*{
+    margin: 0;         
+    padding: 0;              
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
+}
+
+body{
+    background-color: var(--amarelo);
+
+}
+
+/* navbar e topbar, comentário: Larissa */
+ul{
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+    list-style: none;  
+
+}
+
+a{
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    transition: .3s;
+    font-family: "Saira Semi Condensed", sans-serif;
+}
+
+header{
+    position: relative;
+    width: 100%;
+}
+
+.top{
+    background:var(--vermelho);
+    /* padding: 20px; */
+}
+
+.container{
+    position: relative;
+    /* max-width: 960px; */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.sociais{
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.container_nav{
+    position: relative;
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.lang{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.botoes_user {
+    display: flex;
+    gap: 1em;
+    justify-content: flex-end; 
+}
+
+
+nav{
+    background: #FFF7E9;
+    box-shadow: 0 4px 20px var(--vermelho);
+    position: relative;
+    padding: 15px 0;
+    z-index: 10;
+
+}
+
+.logo{
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    top: -70px;
+    left: 33%;
+}
+
+nav ul{
+    
+    width: 100%;
+    transition: .3s;
+}
+
+
+
+.especial {
+    margin-left: 25em; 
+}
+
+
+nav ul li a{
+  color: black;
+ font-weight: bold;
+ padding: 0.8em; 
+ box-sizing: border-box;
+ display: inline-block;
+
+}
+
+nav ul li a:hover{
+    transition: 0.6s  ease-in-out; 
+    background-color: var(--laranja);
+    box-shadow: inset 0 0 0 6px var(--amarelo),
+    0 6px 0px black; 
+    color: white;
+    border-radius: 1em;    
+    padding: 0.8em;
+    
+}
+
+.barra_pesquisa {
+    display: flex;
+    align-items: center;
+    background-color: var(--amarelo);
+    padding: 6px;
+    margin: 0.8em;
+    border-radius: 5px;
+    box-shadow: 0 6px 0px black; 
+    margin-right: 0;    
+}
+
+.barra_pesquisa input[type="search"] {
+    flex: 1;
+    width: 25em;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    background-color: #FFF6E4;
+}
+
+.barra_pesquisa input[type="search"]::placeholder {
+    color: #e4766c;
+}
+
+.barra_pesquisa input:focus{
+    color: #e4766c;
+}
+
+.barra_pesquisa .botao_pesquisa {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.barra_pesquisa .botao_pesquisa img {
+    width: auto;
+    height: auto;
+    vertical-align: middle;
+
+}
+
+.botao-container {
+    display: flex; 
+
+}
+
+.carrinho_compras {
+    position: relative;
+    display: inline-block;
+    margin: 0.6em 1em 0 1em;
+    padding: 8px 10px;
+    padding-left: 30px; 
+    background-color: var(--verde);
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    border: none;
+    border-radius: 2px;
+    text-align: center;
+    cursor: pointer;
+    font-family: "Saira Semi Condensed", sans-serif;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.carrinho_compras img {
+    position: absolute;
+    left: -20px; 
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px; 
+    height: auto;
+}
+
+.carrinho_compras:hover{
+    background-color: #269e70;
+}
+
+.perfil_usuario {
+    position: relative;
+    display: inline-block;
+    padding: 8px 15px;
+    margin: 0 1em 0 1em;
+    background-color: var(--verde);
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    border: 3px solid #FFDF00; 
+    border-radius: 2px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 2px white; 
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+.perfil_usuario img{
+    width: auto;
+    height: auto;
+    vertical-align: middle;
+    margin-right: 0.5em;
+}
+
+.perfil_usuario p{
+   display: inline;
+
+}
+
+.perfil_usuario:hover {
+    background-color: #30966f; 
+}
+
+
+.menuHamburguer{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: none; 
+    position: relative;
+    z-index: 100; 
+}
+label{
+    padding: 15px 0;
+    display: none;
+}
+
+
+
+
+.fundo{
+    background-color: var(--verde) !important;
+}
+
+
+.filtros {
+    font-family: "Saira Semi Condensed", sans-serif;
+    height: 100vh;
+    width: 30%; 
+    padding: 12px;
+    color: white;
+    background-color: var(--verde);
+    display: flex;
+    flex-direction: column;  
+    justify-content: flex-start; 
+}
+
+.filtros h3{
+   font-family: 'Gulfs Display';
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1em;
+    letter-spacing: 0.2rem;
+    color: var(--amarelo);
+    text-shadow: 
+    2px 2px 0px black,    
+    2px -1px 0px black; 
+    -webkit-text-stroke-width: 0.1px; 
+    -webkit-text-stroke-color: #000; 
+}
+
+.filtros h4{
+   font-family: 'Gulfs Display';
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: var(--laranja);
+    margin: 1em 0 1em 0;
+    -webkit-text-stroke-width: 0.1px; 
+    -webkit-text-stroke-color: #000; 
+    text-shadow: 
+    2px 2px 0px black,    
+    2px -1px 0px black;
+}
+.containerVinis {
+    display: flex;
+    flex-direction: row; 
+}
+
+.labelfiltro{
+    text-transform: uppercase;
+    font-weight: 600;
+    color: white; 
+    font-size: 13px;
+    /* margin-left: 8px;  */
+    display: inline-block; 
+    margin-left: 3em;
+    margin-bottom: -2em;
+}
+
+.preco-display {
+    display: flex; 
+    align-items: center;
+    gap: 5px; 
+}
+
+.preco-display span {
+    font-size: 16px; 
+    color: #000;
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none; 
+    -moz-appearance: none;
+    appearance: none;
+    width: 30px;  
+    height: 30px;
+    margin-top: 1em;
+    border: 2px solid var(--rosa); 
+    border-radius: 5px; 
+    cursor: pointer;
+    transition: 0.3s ease; 
+    display: inline-block;
+
+}
+
+input[type="checkbox"]:checked {
+    background-color: var(--rosa); 
+    border-color: var(--verde); 
+}
+
+input[type="checkbox"]:checked::before {
+    content: '✔';
+    color: white;
+    position: relative;
+    top: 1px;
+    left: 5px;
+    font-size: 15px;
+}
+
+input[type="range"]{
+    width: 150px;
+    margin-bottom: 1em;
+}
+
+
+
+#filtrar{
+    position: relative;
+    display: inline-block;
+    padding: 8px 15px;
+    margin: 3em 0 0 1em;
+    background-color: var(--amarelo);
+    color: black;
+    font-size: 12px;
+    font-weight: 600;
+    border: 3px solid var(--laranja); 
+    border-radius: 2px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 2px white; 
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    width: 100px;
+}
+
+#display {
+    border: 1px solid #000;
+    box-shadow: 6px 6px 0px rgb(0, 0, 0);
+    border-radius: 2px;
+    padding: 5px;
+    width: 80px; 
+    text-align: right; 
+}
+
+
+
+/* Vinis, comentário: Larissa */
+
+
+.produto-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+}
+
+.produto-card {
+    background-color: white;
+    border-radius: 30px;
+    border: 10px solid var(--laranja);
+    box-shadow: 10px 10px 0px black; 
+    font-family: "Saira Semi Condensed", sans-serif;
+    text-align: left !important;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1em;
+    width: 400px; 
+    margin: 1em;
+}
+
+.produto-card:hover {
+    transform: scale(1.05); 
+}
+
+.produto-imagem img {
+    max-height: auto; 
+    object-fit: cover; 
+    width: 100%;
+    border-radius: 8px;
+}
+
+.produto-detalhes {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.produto-nome {
+    letter-spacing: 0.1rem;
+    font-size: 1.5rem;
+    margin: 0.5em 0;
+    text-align: left;
+}
+
+.produto-descricao {
+    flex-grow: 1;
+    margin: 0.5em 0;
+    font-size: 1.1rem;
+    color: var(black);
+    text-align: left;
+}
+
+.produto-categoria,
+.produto-artista
+ {
+    margin: 0.5em 0;
+    text-align: left;
+    color: var(--laranja);
+}
+
+
+.produto-preco{
+    text-align: right;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--verde);
+}
+
+.produto-avaliacao {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    color: var(--vermelho);
+    margin: -1.5em 0em 1em;
+}
+.produto-avaliacao img {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+}
+
+.produto-botoes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1em;
+}
+
+.btn-comprar{
+    background-color: #00995E;
+    color: #fff;  
+    font-size: 1rem;  
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.btn-comprar:hover {
+    background-color: #007a4b;
+}
+
+.btn-favoritar {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.btn-favoritar img {
+    height: 25px;
+    width: 25px;
+}
+
+/* modal css, comentário: Larissa */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #faca7e6b;
+}
+
+.conteudo-modal {
+    font-family: "Saira Semi Condensed", sans-serif;
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 30px;
+    border: 10px solid var(--laranja);
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 10px 10px 0px black; 
+    transition: transform 0.3s ease-in-out;
+}
+
+.conteudo-modal:hover{
+    transform: scale(1.05); 
+
+}
+
+
+.close {
+    position: relative;
+    cursor: pointer;
+    right: 1%; 
+}
+
+
+#quantidade {
+    width: 60px; 
+    padding: 10px; 
+    font-size: 16px; 
+    border: 8px solid var(--laranja);
+    box-shadow: 5px 5px 0px black; 
+    border-radius: 3px;
+    background-color: #fce1b3;
+    color: black; 
+    transition: border-color 0.3s ease;
+}
+
+#quantidade:focus {
+    border-color: var(--verde);
+    outline: none;
+}
+
+
+.modal-esquerda {
+    width: 40%;
+    padding-right: 20px;
+}
+
+.imagem-modal {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.modal-direita {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.close {
+    align-self: flex-end;
+    cursor: pointer;
+}
+.nome-preco-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 10px;
+}
+
+h2#nome-modal {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-right: -5em  !important;
+    max-width: 300px !important;
+}
+
+#descricao-modal {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: #555;
+}
+
+#preco-modal {
+    font-size: 1.5em;
+    color: var(--verde); 
+    font-weight: bold;
+}
+
+.nome_l {
+    font-size: 1.1em;
+    color: var(--laranja);
+    margin-top: 1em;
+}
+
+span{
+    color: black;
+}
+
+.info-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 5px; 
+}
+
+.categoria-artista {
+    display: flex;
+    flex-direction: column; 
+    margin-right: 20px; 
+}
+
+.categoria-artista p {
+    margin: -1em 0;
+}
+
+
+.btn-adicionar-carrinho {
+    margin-top: 1em;
+    padding: 10px 20px;
+    background-color: var(--verde);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.btn-adicionar-carrinho:hover {
+    background-color: #218838;
+}
+
+/* medias, comentário: Larissa */
+
+@media (max-width: 960px) {
+    .logo{
+        left: 30%;
+        top: 2%;
+    }
+    .logo img{
+        width: 200px;
+    }
+    nav .menuHamburguer {
+        display: block;
+        margin: 1em;
+    }
+  
+
+    nav ul{
+        position: fixed;
+        top: 60px;
+        left: -100%;
+        background-color: #FFF6E4;
+        height: 100vh;
+        width: 100%;
+        text-align: center;
+        display: block;
+        transition: all 0.3s ease;
+        z-index: 100;
+    }
+
+
+    nav ul.open{
+        left: 0;
+    }
+
+    nav ul li{
+        width: 100%;
+        margin: 50px 0;
+    }
+    
+    nav ul li .especial{
+        margin: 0 !important;
+    }
+    nav ul li a {
+       font-size: 23px;
+    }
+
+
+    nav ul li a.active,
+    nav ul li a.hover{
+        background: none;
+        color: var(--vermelho);
+    }
+
+    .barra_pesquisa {
+        display: flex;
+        flex-direction: column; 
+        width: 100%;
+    }
+
+    .barra_pesquisa input[type="search"] {
+        width: 300px; 
+    }
+
+    .barra_pesquisa .botao_pesquisa img {
+        display: block;    
+    }
+
+ .perfil_usuario {
+        justify-content: center;
+        padding: 0;
+        width: 50px; 
+        height: 50px; 
+        border-radius: 10%;
+        background-color: var(--verde); 
+    }
+
+    .carrinho_compras {
+        padding: 0; 
+        justify-content: center;
+        border-radius: 10%;
+        background-color: var(--verde); 
+    }
+
+    .botoes_user button p {
+        display: none; 
+    }
+
+   
+    .carrinho_compras  img {
+        width: 40px; 
+        height: 40px;
+        margin: 0.7em 4em 10em -1em;
+    }
+
+    .sociais{
+        display: none;
+    }
+
+
+.filtros {
+    width: 30%; 
+    padding: 10px;
+}
+
+.filtros h3 {
+    font-size: 1.5rem; 
+}
+
+.filtros h4 {
+    font-size: 1.2rem; 
+}
+
+
+.preco-display {
+    display: flex;
+    flex-direction: column;
+}
+
+.preco-display input {
+    width: 100%; 
+}
+
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px; 
+}
+
+input[type="range"] {
+    width: 100%; 
+}
+#preco-modal{
+    font-size: 1.5rem;
+}
+#nome-modal{
+    font-size: 2rem !important;
+}
+
+.conteudo-modal {
+    width: 60%;
+}
+
+.modal-esquerda,
+.modal-direita {
+    max-width: 100%;
+    flex: 1 1 100%;
+}
+
+.modal-direita {
+    padding-left: 0;
+}
+
+.info-container {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.quantidade-container {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.close {
+    bottom: 30em;
+    right: -3px;
+}
+
+#quantidade {
+    width: 80px;
+    margin-left: 70%;
+
+}
+
+#display{
+    margin-left: 5em;
+}
+.paginacao a {
+    font-size: 0.8rem; /* Fonte ainda menor */
+    padding: 6px 12px; /* Menos padding */
+}
+
+.paginacao li {
+    margin: -35px 10px; 
+    margin-left: -13em;
+}
+   
+}
+
+@media screen and (max-width: 650px){
+    .produto-nome{
+        font-size: 0.2rem !important;
+    }
+    .produto-preco{
+        font-size: 0.5rem !important;
+    }
+    .produto-avaliacao{
+        margin-top: 1em;
+        margin-left: 2px;
+      }
+
+      .produto-imagem img{
+        width: 200px;
+        height: 200px;
+        margin: 1em auto;
+        top: 5em;
+      }
+      .produto-card {
+        width: 100%;
+      }
+
+      .conteudo-modal {
+        width: 80%;
+    }
+
+    .modal-esquerda,
+    .modal-direita {
+        max-width: 100%;
+        flex: 1 1 100%;
+    }
+
+    .modal-direita {
+        padding-left: 0;
+    }
+
+    .info-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .quantidade-container {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .close {
+        bottom: 20em;
+        right: -3px;
+    }
+
+    #quantidade {
+        width: 80px;
+        margin-left: 70%;
+
+    }
+
+.produto-avaliacao{
+    margin: 0em 0 0em 6em;
+}
+
+.btn-comprar{
+    margin-top: 1em;
+}
+
+
+
+}
+
+@media screen and (max-width: 768px){
+    .produto-nome{
+        font-size: 1.5rem !important;
+    }
+    .produto-preco{
+        font-size: 1.2rem !important;
+    }
+
+    .conteudo-modal {
+        width: 80%;
+    }
+
+    .modal-esquerda,
+    .modal-direita {
+        max-width: 100%;
+        flex: 1 1 100%;
+    }
+
+    .modal-direita {
+        padding-left: 0;
+    }
+
+    .info-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .quantidade-container {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .close {
+        bottom: 20em;
+        right: -3px;
+    }
+
+    #quantidade {
+        width: 80px;
+        margin-left: 70%;
+
+    }
+    .produto-avaliacao img{
+        width: 20px;
+        height: 20px;
+        margin: 0;
+    }
+
+    .btn-favoritar{
+        width: 10px;
+        height: 10px;
+        margin-top: -1em;
+        margin-right: 1em;
+    }
+
+    .btn-comprar{
+        margin-top: 3em;
+    }
+
+    .paginacao a {
+        font-size: 0.8rem; /* Fonte ainda menor */
+        padding: 6px 12px; /* Menos padding */
+    }
+
+    .paginacao li {
+        margin: -35px 10px; 
+        margin-left: -13em;
+    }
+
+}
+ 
+
+@media screen and (max-width: 860px){
+    .produto-nome{
+        font-size: 1.5rem;
+    }
+    .produto-preco{
+        font-size: 1.4rem;
+    }
+
+
+
+}
+
+@media screen and (max-width: 550px){
+    .produto-card{
+        text-align: center;
+        margin:0;
+    }
+   
+    
+    .produto-nome{
+        font-size: 1.2rem !important;
+        text-align: center;
+        margin-left: 0.2em;
+    }
+    .produto-preco{
+        font-size: 1rem!important;
+    }
+  
+    .produto-avaliacao img{
+        width: 15px;
+        height: 15px;
+        margin: 0;
+    }
+    .produto-avaliacao{
+        margin-left: 3em;
+    }
+
+    .btn-favoritar img{
+       display: none;
+    }
+
+    .btn-comprar{
+        margin: 1em 0em 0em 3em;
+    }
+    
+    input[type="range"]{
+        width: 150px;
+    }
+    
+    .conteudo-modal {
+        width: 80%;
+    }
+
+    .modal-esquerda,
+    .modal-direita {
+        max-width: 100%;
+        flex: 1 1 100%;
+    }
+
+    .modal-direita {
+        padding-left: 0;
+    }
+
+    .info-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #preco-modal{
+        font-size: 1.2rem;
+    }
+    #nome-modal{
+        font-size: 1.5rem !important;
+    }
+
+    .quantidade-container {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .close {
+        bottom: 18em;
+        right: -3px;
+    }
+
+    #quantidade {
+        width: 80px;
+        margin-left: 70%;
+
+    }
+
+    .paginacao a {
+        font-size: 0.8rem; 
+        padding: 6px 12px; 
+    }
+    
+    .paginacao li {
+        margin: -25px 60px; 
+        margin-left: -16em;
+    }
+}
