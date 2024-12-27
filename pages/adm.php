@@ -2,6 +2,11 @@
 session_start();
 require '../includes/conexao.php';
 
+if (isset($_GET['msg'])) {
+    $msg = htmlspecialchars($_GET['msg']);
+    echo "<script>alert('$msg');</script>";
+}
+
 if (!isset($_SESSION['id_cliente']) || $_SESSION['id_cliente'] !== 'admin') {
     echo "<script>
     alert('Você não tem permissão para acessar esta página.');

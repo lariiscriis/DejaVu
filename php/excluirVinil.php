@@ -13,6 +13,11 @@ if (isset($_GET['vinilId'])) {
     try {
         $pdo->beginTransaction();
 
+        $sql = "DELETE FROM pagamento_pedido WHERE cd_vinil = :vinilId";
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindParam(':vinilId', $vinilId);
+        $stmt->execute();
+
         $sql = "DELETE FROM vinil_artista WHERE cd_vinil = :vinilId";
         $stmt = $pdo->prepare($sql);
         $stmt->bindParam(':vinilId', $vinilId);

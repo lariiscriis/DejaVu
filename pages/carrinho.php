@@ -98,7 +98,7 @@ function calcularTotal() {
                             </button>
                         </a>
                     </li>
-                    <li> <a href="carrinho.php"><button href="#" class="carrinho_compras"><img src="../assets/images/minhas_compras.svg" ><p>Minhas Compras</p></button></li></a>
+                    <li> <a href="carrinho.php"><button href="#" class="carrinho_compras"><img src="../assets/images/minhas_compras.svg"><p>Minhas Compras</p></button></li></a>
                 </ul>
                 </div>
             </div>

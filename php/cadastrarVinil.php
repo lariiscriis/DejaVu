@@ -54,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $pdo->commit();
 
-        echo "<script>alert('Vinil e Artista Cadastrados com Sucesso!'); window.location.href = 'adm.php';</script>";
+        echo "<script>alert('Vinil e Artista Cadastrados com Sucesso!'); window.location.href = '../pages/adm.php';</script>";
 
     } catch (PDOException $e) {
 
