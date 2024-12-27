@@ -251,7 +251,7 @@ require 'includes/conexao.php';
         <section id="contato">
                 <div class="contato-form">
                     <h2>Fale Conosco !</h2>
-                    <form action="pages/newsletter.php" method="post">
+                    <form action="php/newsletter.php" method="post">
                         <label for="nome">Nome:</label>
                         <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
         
