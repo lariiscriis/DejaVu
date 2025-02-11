@@ -1,5 +1,7 @@
 # Dejavu - E-commerce de Vinis
 
+<p align="center"> <img src="assets/images/deja_vu 1.svg"></p>
+
 `Dejavu` é um e-commerce fictício desenvolvido para a venda de vinis antigos e modernos com um design retrô. O sistema permite que os usuários façam compras, se registrem, façam login, e gerenciem suas informações.
 Além disso, o projeto inclui uma página de administração para gerenciar produtos. O site foi desenvolvido utilizando PHP, MySQL, JavaScript, e hospedado localmente com XAMPP/USBwebserver.
 
